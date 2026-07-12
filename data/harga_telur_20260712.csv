@@ -1,0 +1,4 @@
+tanggal,harga_nasional,indeks,volatilitas_pct,harga_jabar_dki,harga_jawa_tengah,harga_jawa_timur,harga_luar_jawa,pct_change_harian,ma7,ma30,zscore,anomali,volatilitas_7d,bulan,minggu,hari_nama
+2026-06-26,21974.0,89.69,,25000.0,25000.0,25000.0,25000.0,,21974.0,21974.0,-1.132,False,,2026-06,26,Friday
+2026-07-04,22190.0,90.57,,25000.0,25000.0,25000.0,25000.0,0.983,22082.0,22082.0,0.763,False,,2026-07,27,Saturday
+2026-07-12,22145.0,90.38,,25000.0,25000.0,25000.0,25000.0,-0.203,22103.0,22103.0,0.369,False,0.839,2026-07,28,Sunday

@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "updated_at": "2026-07-12 00:00:00",
+    "summary": {
+        "harga_terakhir": 22145,
+        "harga_rata_rata": 22103.0,
+        "harga_tertinggi_nasional": 22190,
+        "harga_terendah_nasional": 21974,
+        "indeks": 90.38,
+        "jumlah_data": 3
+    },
+    "regional": {
+        "Jabar-DKI": 25000,
+        "Jawa Tengah": 25000,
+        "Jawa Timur": 25000,
+        "Luar Jawa": 25000
+    }
+}
