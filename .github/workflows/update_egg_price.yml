@@ -29,7 +29,7 @@ jobs:
       - name: Install library Python
         run: |
           python -m pip install --upgrade pip
-          pip install -r DuckCareBigData/requirements.txt
+          pip install -r DuckCare-BigData/requirements.txt
 
       - name: Jalankan update harga telur
         env:
