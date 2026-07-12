@@ -33,7 +33,7 @@ jobs:
       - name: Install library Python
         run: |
           python -m pip install --upgrade pip
-          pip install -r bigdata/requirements.txt
+          pip install -r DuckCareBigData/requirements.txt
 
       - name: Jalankan update harga telur
         env:
@@ -41,7 +41,7 @@ jobs:
           MONGO_DB_NAME: harga_telur_db
           MONGO_COLLECTION: harga_harian
         run: |
-          python bigdata/update_egg_price.py
+          python DuckCare-BigData/update_egg_price.py
 
       - name: Commit report JSON terbaru
         run: |
