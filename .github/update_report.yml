@@ -1,0 +1,67 @@
+name: Update DuckCare Report
+
+on:
+
+  schedule:
+
+    - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+
+jobs:
+
+  report:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+
+      contents: write
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+
+        with:
+
+          python-version: "3.11"
+
+      - name: Install Library
+
+        run: |
+
+          pip install -r requirements.txt
+
+      - name: Scraping
+
+        run: |
+
+          python scripts/scraper.py
+
+      - name: Preprocess
+
+        run: |
+
+          python scripts/preprocess.py
+
+      - name: Generate Report
+
+        run: |
+
+          python scripts/generate_report.py
+
+      - name: Commit
+
+        run: |
+
+          git config user.name github-actions
+
+          git config user.email github-actions@github.com
+
+          git add .
+
+          git diff --cached --quiet || git commit -m "Update report"
+
+          git push
