@@ -48,6 +48,6 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          git add bigdata/output/report_harga_telur.json
+          git add DuckCare-BigData/output/report_harga_telur.json
           git diff --cached --quiet || git commit -m "Update report harga telur"
           git push
