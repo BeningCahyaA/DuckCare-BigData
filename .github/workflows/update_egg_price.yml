@@ -17,10 +17,6 @@ jobs:
   update-egg-price:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: duckcare
-
     steps:
       - name: Ambil kode repository
         uses: actions/checkout@v4
