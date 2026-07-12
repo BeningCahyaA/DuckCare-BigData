@@ -1,0 +1,41 @@
+name: Update DuckCare Report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Library
+        run: |
+          pip install pandas numpy requests
+
+      - name: Generate Report
+        run: |
+          python scripts/generate_report.py
+
+      - name: Commit JSON
+        run: |
+          git config --global user.name "BeningCahyaA"
+          git config --global user.email "beningcahya873@gmail.com"
+
+          git add output/report_harga_telur.json
+
+          git diff --cached --quiet || git commit -m "Update report harga telur"
+
+          git push
